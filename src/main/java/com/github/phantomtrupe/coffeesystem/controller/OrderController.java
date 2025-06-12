@@ -1,4 +1,3 @@
-
 package com.github.phantomtrupe.coffeesystem.controller;
 
 import org.springframework.http.ResponseEntity;
@@ -42,7 +41,8 @@ public class OrderController {
         order.setCoffees(coffees);
         double total = coffees.stream().mapToDouble(Coffee::getPrice).sum();
         order.setTotalPrice(total);
-        order.setEstimatedTime(coffees.size() * 2);
+        double eta = coffees.stream().mapToDouble(Coffee::getEstimatedTime).sum();
+        order.setEstimatedTime(eta);
         Order saved = orderRepo.save(order);
         return ResponseEntity.ok(saved);
     }

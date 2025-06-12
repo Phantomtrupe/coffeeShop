@@ -29,11 +29,11 @@ public class Order {
     private List<Coffee> coffees;
 
     private double totalPrice;
-    private int estimatedTime;
+    private double estimatedTime;
 
     public Order() {}
 
-    public Order(Long id, LocalDateTime dateTime, List<Coffee> coffees, double totalPrice, int estimatedTime) {
+    public Order(Long id, LocalDateTime dateTime, List<Coffee> coffees, double totalPrice, double estimatedTime) {
         this.id = id;
         this.dateTime = dateTime;
         this.coffees = coffees;
@@ -73,11 +73,11 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
-    public int getEstimatedTime() {
+    public double getEstimatedTime() {
         return estimatedTime;
     }
 
-    public void setEstimatedTime(int estimatedTime) {
+    public void setEstimatedTime(double estimatedTime) {
         this.estimatedTime = estimatedTime;
     }
 

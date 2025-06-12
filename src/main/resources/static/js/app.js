@@ -33,10 +33,10 @@
 
   function renderCart() {
     cartItemsEl.innerHTML = '';
-    let total = 0, count = 0;
+    let total = 0, totalEta = 0;
     Object.values(cart).forEach(({coffee, qty}) => {
       total += coffee.price * qty;
-      count += qty;
+      totalEta += coffee.estimatedTime * qty;
       const li = document.createElement('li');
       li.innerHTML = `
         <span>${coffee.name} × ${qty} - $${(coffee.price * qty).toFixed(2)}</span>
@@ -45,8 +45,8 @@
       cartItemsEl.appendChild(li);
     });
     totalPriceEl.textContent = `$${total.toFixed(2)}`;
-    etaEl.textContent = `${count * 2} mins`;
-    placeOrderBtn.disabled = count === 0;
+    etaEl.textContent = `${totalEta.toFixed(1)} mins`;
+    placeOrderBtn.disabled = Object.keys(cart).length === 0;
   }
 
   function setupEvents() {

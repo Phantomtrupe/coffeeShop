@@ -1,9 +1,6 @@
 package com.github.phantomtrupe.coffeesystem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Coffee {
@@ -16,15 +13,19 @@ public class Coffee {
     private double price;
     private String imagePath;
 
+    @Column(name = "estimated_time")
+    private double estimatedTime;
+
     public Coffee() {
     }
 
-    public Coffee(Long id, String name, String description, double price, String imagePath) {
+    public Coffee(Long id, String name, String description, double price, String imagePath, double estimatedTime) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.imagePath = imagePath;
+        this.estimatedTime = estimatedTime;
     }
 
     public Long getId() {
@@ -67,6 +68,14 @@ public class Coffee {
         this.imagePath = imagePath;
     }
 
+    public double getEstimatedTime() {
+        return estimatedTime;
+    }
+
+    public void setEstimatedTime(double estimatedTime) {
+        this.estimatedTime = estimatedTime;
+    }
+
     @Override
     public String toString() {
         return "Coffee{" +
@@ -75,6 +84,7 @@ public class Coffee {
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", imagePath='" + imagePath + '\'' +
+                ", estimatedTime=" + estimatedTime +
                 '}';
     }
 }
