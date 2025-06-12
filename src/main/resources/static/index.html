@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeSpot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="logo">CoffeeSpot</h1>
+        <nav><a href="/orders.html">Order History</a></nav>
+    </header>
+    <main class="container">
+        <section class="menu">
+            <!-- Example card, replicate for each coffee -->
+            <div class="coffee-card">
+                <img src="/images/coffee_latte.png" alt="Latte">
+                <h2>Latte</h2>
+                <p class="price">$4.50</p>
+                <p class="desc">Smooth espresso with milk</p>
+                <button class="btn primary">Order</button>
+            </div>
+            <!-- more cards... -->
+        </section>
+        <aside class="cart">
+            <h2>Your Order</h2>
+            <ul class="cart-items">
+                <!-- dynamically inserted items -->
+                <li>
+                    <span>Latte</span>
+                    <span>$4.50</span>
+                    <button class="remove">×</button>
+                </li>
+            </ul>
+            <div class="summary">
+                <p>Total: <span id="total-price">$4.50</span></p>
+                <p>ETA: <span id="eta">2 mins</span></p>
+                <button id="place-order" class="btn primary" disabled>Place Order</button>
+            </div>
+        </aside>
+    </main>
+    <script src="/js/app.js"></script>
+</body>
+</html>

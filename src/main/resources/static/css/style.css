@@ -1,0 +1,184 @@
+/* Warm coffee-themed styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdf5e6; /* light cream */
+  color: #42210b; /* dark brown text */
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6b4226; /* coffee brown */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.app-header .logo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.app-header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+.menu {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 1.5rem;
+}
+.coffee-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.coffee-card img {
+  width: 100%;
+  height: auto;
+}
+.coffee-card h2 {
+  margin: 0.5rem 1rem 0;
+  font-size: 1.25rem;
+}
+.coffee-card .price {
+  margin: 0.25rem 1rem;
+  font-weight: 600;
+}
+.coffee-card .desc {
+  margin: 0.25rem 1rem 1rem;
+  font-size: 0.9rem;
+  color: #5a3e2b;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.75rem 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.btn.primary {
+  background-color: #8b5e3c;
+  color: #fff;
+}
+
+.cart {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  height: fit-content;
+}
+.cart h2 {
+  margin-top: 0;
+}
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+.cart-items li .remove {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #8b5e3c;
+  cursor: pointer;
+}
+.summary {
+  margin-top: 1rem;
+}
+.summary p {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+#place-order:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Order History Page Styles */
+.orders-container {
+  background-color: #fdf6f0;
+  padding: 2rem;
+}
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.order-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+.order-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #eee;
+}
+.order-summary p {
+  margin: 0.5rem 0;
+}
+.status.completed { color: #5c3d2e; }
+.status.pending { color: #d4a373; }
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #b08968;
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.delete-btn:hover {
+  color: #5c3d2e;
+}
+
+@media(max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .cart {
+    margin-top: 2rem;
+  }
+  .orders-list {
+    gap: 1rem;
+  }
+}

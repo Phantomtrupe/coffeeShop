@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History - CoffeeSpot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="logo">CoffeeSpot</h1>
+    <nav><a href="index.html">Menu</a></nav>
+  </header>
+  <main class="orders-container">
+    <h2>Order History</h2>
+    <div class="orders-list">
+      <!-- Example Order Card -->
+      <div class="order-card">
+        <div class="order-header">
+          <h3>Order #00123</h3>
+          <time datetime="2025-06-12T14:00">2025-06-12 14:00</time>
+        </div>
+        <ul class="order-items">
+          <li><span>Latte</span><span>$4.50</span></li>
+          <li><span>Americano</span><span>$3.50</span></li>
+        </ul>
+        <div class="order-summary">
+          <p>Total: <strong>$8.00</strong></p>
+          <p>Status: <span class="status completed">Completed</span></p>
+        </div>
+        <button class="btn delete-btn" aria-label="Delete Order">&times;</button>
+      </div>
+      <!-- Repeat for each order -->
+    </div>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+</html>
