@@ -1,6 +1,7 @@
 # ☕ coffeeShop
 
-A modern, responsive web application for browsing and ordering specialty coffees.  
+A modern,very basic,responsive web application for browsing and ordering specialty coffees.  
+
 Built to showcase an intuitive user experience, real-time menu updates, and seamless checkout.
 
 ## 🌟 Features
